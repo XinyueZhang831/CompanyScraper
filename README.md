@@ -1,9 +1,9 @@
 # CompanySracper
 
-###process_checking.py
+### process_checking.py
  check if the process is running in 2 minues. Will send an inform email to the user if the process stopping running 2 minutes.
-###Dynamic_connect.py
+### Dynamic_connect.py
  connect to the internet on virture machine server in order to change ip.
  
-##Author:
+## Author:
  Xinyue Zhang
