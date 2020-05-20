@@ -33,12 +33,12 @@ def check_web():
 
 
 def send_email():
-    server = '20041 first machine'
+    server = 'your send out message'
     mail_host = 'smtp.163.com'
-    mail_user = 'xinyueamber'
-    mail_pass = 'FBSAGUYNPMNOXPOY'
-    sender = 'xinyueamber@163.com'
-    receivers = ['xinyuecheol@gmail.com']
+    mail_user = 'your email name'
+    mail_pass = 'your email password or credential'
+    sender = 'your sender email'
+    receivers = ['your receriver email']
     message = MIMEText('content', 'plain', 'utf-8')
     message['Subject'] = 'Server needs to reset:' + server
     message['From'] = sender
