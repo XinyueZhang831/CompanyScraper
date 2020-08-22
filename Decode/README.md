@@ -1,12 +1,12 @@
 # Decode
 
-# Request .ttf files
+### Request .ttf files
  According to the links from the csv file, download new .ttf file.
  
-# Convert .ttf to .xml
+### Convert .ttf to .xml
  Find the relationship between the encoded data and real data.
  
-# Create Dictionary
+### Create Dictionary
  Change the data from the .csv file.
  
 # Logic:
