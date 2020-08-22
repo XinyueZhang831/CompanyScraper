@@ -9,6 +9,9 @@
 ### webcomp_UI.py
  collect parameters for the main code.
  
+### Decode.py
+ Change the encoded data number back to real number.
+ 
 # Main code
  This is a acedamic research project which uses Selenium web scarpy TianyanX commercial informations.
  Main code includes:
