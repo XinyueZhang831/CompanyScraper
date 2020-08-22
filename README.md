@@ -22,8 +22,8 @@
  - Find the .ttf font file to prepare for decoding.
  - Close extra handles.
  - Quit driver if there is robot detection.
- *Data cannot be used for commercial reason!
- *With some reasons, the code will not be post.
+ * Data cannot be used for commercial reason!
+ * With some reasons, the code will not be post.
  
 ## Author:
  Xinyue Zhang
