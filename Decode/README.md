@@ -10,8 +10,8 @@
  Change the data from the .csv file.
  
 # Logic:
+![TTF file](/Decode/)
 
- 
 
  
 ## Author:
