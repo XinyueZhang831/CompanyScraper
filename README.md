@@ -9,6 +9,8 @@
 ### webcomp_UI.py
  collect parameters for the main code.
  
+ ![UI](WX20200822-144618@2x.png)
+ 
 ### Decode.py
  Change the encoded data number back to real number.
  
