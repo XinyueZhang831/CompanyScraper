@@ -11,7 +11,7 @@
  
 # Logic:
 ![TTF file](/Decode/WX20200822-141901@2x.png)
-
+Font editor from Baidu.com can help to find the logic inside the ttf file, check [Font Editor](http://fontstore.baidu.com/static/editor/)
 
  
 ## Author:
