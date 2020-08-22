@@ -9,7 +9,7 @@
 ### webcomp_UI.py
  collect parameters for the main code.
  
- ![UI](WX20200822-145351@2x.png | width=100)
+ ![UI](WX20200822-145351@2x.png) {:height="24px" width="48px"}
  
 ### Decode.py
  Change the encoded data number back to real number.
