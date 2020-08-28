@@ -24,7 +24,7 @@ def open_ip(dynamic=False, log_in=False):
         time.sleep(2)
 
 
-    # option = Options()
+    # option = Options() 
 
     driver = webdriver.Chrome(executable_path='D:\/webcomp\/driver/chromedriver')
     driver.get('This is the website')
