@@ -147,7 +147,7 @@ def find_stuff_first_table(driver, current_name, comp_name):
         columns=['name', 'base_money', 'real_money', 'starting_date', 'business_statue', 'social_code', 'regist_code',
                  'tax_code', 'orgnization_code', 'company_type',
                  'industry', 'time', 'reg_orgnization', 'run_time', 'tax', 'employee', 'insurance', 'old_name',
-                 'eng_name', 'adress', 'business', 'list_name', 'comp_name','tyc-num'])
+                 'eng_name', 'adress', 'business', 'list_name', 'comp_name','xxx-num'])
     name = ‘name’
     base_money = 'base_money'
     real_money = 'real_money'
