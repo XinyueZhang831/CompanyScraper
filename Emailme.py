@@ -11,7 +11,7 @@ def check_web(checking_path):
 
 
 def send_email(email_address, email_auth, send_content):
-    mail_host = 'smtp.163.com'
+    mail_host = 'smtp.xxxx.com'
     mail_user = 'xinyueamber'
     mail_pass = email_auth
     sender = email_address
