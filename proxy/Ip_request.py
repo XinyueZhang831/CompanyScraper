@@ -13,7 +13,7 @@ class IpRequesst:
         try:
             if self.n == True:
                 print('here')
-                targetUrl = 'http://http.tiqu.alicdns.com/getip3?num=1&type=2&pro=510000&city=0&yys=0&port=1&time=2&ts=1&ys=1&cs=1&lb=1&sb=0&pb=4&mr=1&regions='
+                targetUrl = ''
                 resp = requests.get(targetUrl)
                 resp_dict = json.loads(resp.text)
                 first = IpRequesst.check_white_list(self, resp_dict)
@@ -32,12 +32,11 @@ class IpRequesst:
             return name
         except:
             IpRequesst.request_ip(self)
-        #targetUrl = "http://http.tiqu.alicdns.com/getip3?num=1&type=2&pro=510000&city=0&yys=0&port=1&time=2&ts=1&ys=1&cs=1&lb=1&sb=0&pb=4&mr=1&regions=&gm=4"
-
+       
 
 
     def add_to_whitelist(self,first):
-        str1= 'http://wapi.http.cnapi.cc/index/index/save_white?neek=102602&appkey=73a27c6c7a285b609ba0893dce49562e&white='
+        str1= ''
         reps = requests.get(str1 + first)
         return reps
 
