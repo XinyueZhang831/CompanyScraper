@@ -148,56 +148,39 @@ def find_stuff_first_table(driver, current_name, comp_name):
                  'tax_code', 'orgnization_code', 'company_type',
                  'industry', 'time', 'reg_orgnization', 'run_time', 'tax', 'employee', 'insurance', 'old_name',
                  'eng_name', 'adress', 'business', 'list_name', 'comp_name','tyc-num'])
-    name = driver.find_element_by_css_selector(
-        '#_container_baseInfo > table:nth-child(1) > tbody > tr:nth-child(1) > td.left-col.shadow > div > div:nth-child(1) > div.humancompany > div.name > a').text
-    base_money = driver.find_element_by_css_selector(
-        '#_container_baseInfo > table.table.-striped-col.-border-top-none.-breakall > tbody > tr:nth-child(1) > td:nth-child(2) > div').text
-    real_money = driver.find_element_by_css_selector(
-        '#_container_baseInfo > table.table.-striped-col.-border-top-none.-breakall > tbody > tr:nth-child(1) > td:nth-child(4)').text
-    starting_date = driver.find_element_by_css_selector(
-        '#_container_baseInfo > table.table.-striped-col.-border-top-none.-breakall > tbody > tr:nth-child(2) > td:nth-child(2) > div').text
-    business_statue = driver.find_element_by_css_selector(
-        '#_container_baseInfo > table.table.-striped-col.-border-top-none.-breakall > tbody > tr:nth-child(2) > td:nth-child(4)').text
-    social_code = driver.find_element_by_css_selector(
-        '#_container_baseInfo > table.table.-striped-col.-border-top-none.-breakall > tbody > tr:nth-child(3) > td:nth-child(2)').text
-    regist_code = driver.find_element_by_css_selector(
-        '#_container_baseInfo > table.table.-striped-col.-border-top-none.-breakall > tbody > tr:nth-child(3) > td:nth-child(4)').text
-    tax_code = driver.find_element_by_css_selector(
-        '#_container_baseInfo > table.table.-striped-col.-border-top-none.-breakall > tbody > tr:nth-child(4) > td:nth-child(2)').text
-    orgnization_code = driver.find_element_by_css_selector(
-        '#_container_baseInfo > table.table.-striped-col.-border-top-none.-breakall > tbody > tr:nth-child(4) > td:nth-child(4)').text
-    company_type = driver.find_element_by_css_selector(
-        '#_container_baseInfo > table.table.-striped-col.-border-top-none.-breakall > tbody > tr:nth-child(5) > td:nth-child(2)').text
-    industry = driver.find_element_by_css_selector(
-        '#_container_baseInfo > table.table.-striped-col.-border-top-none.-breakall > tbody > tr:nth-child(5) > td:nth-child(4)').text
-    time = driver.find_element_by_css_selector(
-        '#_container_baseInfo > table.table.-striped-col.-border-top-none.-breakall > tbody > tr:nth-child(6) > td:nth-child(2)').text
-    reg_orgnization = driver.find_element_by_css_selector(
-        '#_container_baseInfo > table.table.-striped-col.-border-top-none.-breakall > tbody > tr:nth-child(6) > td:nth-child(4)').text
-    run_time = driver.find_element_by_css_selector(
-        '#_container_baseInfo > table.table.-striped-col.-border-top-none.-breakall > tbody > tr:nth-child(7) > td:nth-child(2) > span').text
-    tax = driver.find_element_by_css_selector(
-        '#_container_baseInfo > table.table.-striped-col.-border-top-none.-breakall > tbody > tr:nth-child(7) > td:nth-child(4)').text
-    employee = driver.find_element_by_css_selector(
-        '#_container_baseInfo > table.table.-striped-col.-border-top-none.-breakall > tbody > tr:nth-child(8) > td:nth-child(2)').text
-    insurance = driver.find_element_by_css_selector(
-        '#_container_baseInfo > table.table.-striped-col.-border-top-none.-breakall > tbody > tr:nth-child(8) > td:nth-child(4)').text
-    old_name = driver.find_element_by_css_selector(
-        '#_container_baseInfo > table.table.-striped-col.-border-top-none.-breakall > tbody > tr:nth-child(9) > td:nth-child(2)').text
-    eng_name = driver.find_element_by_css_selector(
-        '#_container_baseInfo > table.table.-striped-col.-border-top-none.-breakall > tbody > tr:nth-child(9) > td:nth-child(4)').text
-    adress = driver.find_element_by_css_selector(
-        '#_container_baseInfo > table.table.-striped-col.-border-top-none.-breakall > tbody > tr:nth-child(10) > td:nth-child(2)').text
-    business = driver.find_element_by_css_selector(
-        '#_container_baseInfo > table.table.-striped-col.-border-top-none.-breakall > tbody > tr:nth-child(11) > td:nth-child(2) > span').text
+    name = ‘name’
+    base_money = 'base_money'
+    real_money = 'real_money'
+    starting_date = 'starting_date'
+    business_statue = 'business_statue'
+    social_code = 'social_code'
+    regist_code = 'regist_code'
+    tax_code = 'tax_code'
+    orgnization_code = 'orgnization_code'
+    company_type = 'company_type'
+    industry = 'industry'
+    time = 'time'
+    reg_orgnization = 'reg_orgnization'
+    run_time = 'run_time'
+    tax = 'tax'
+    employee = 'employee'
+    insurance = 'insurance'
+    old_name = 'old_name'
+    eng_name = 'eng_name'
+    adress = 'adress'
+    business = 'business'
     src=driver.page_source
-    tyc_num = len(re.findall('tyc-num',src))
+    xxx_num = len(re.findall('xxx-num',src))
+    try:
+        target_font2 = driver.find_element_by_css_selector('head > link:nth-child(47)').get_attribute('href')
+    except:
+        target_font2 = ''
     data = {'name': name, 'base_money': base_money, 'real_money': real_money, 'starting_date': starting_date,
             'business_statue': business_statue, 'social_code': social_code, 'regist_code': regist_code,
             'tax_code': tax_code, 'orgnization_code': orgnization_code, 'company_type': company_type,
             'industry': industry, 'time': time, 'reg_orgnization': reg_orgnization, 'run_time': run_time, 'tax': tax,
             'employee': employee, 'insurance': insurance, 'old_name': old_name, 'eng_name': eng_name, 'adress': adress,
-            'business': business, 'list_name': comp_name, 'comp_name': current_name,'tyc-num':tyc_num}
+            'business': business, 'list_name': comp_name, 'comp_name': current_name,'xxx-num':xxx_num, 'font2':target_font2}
     first_table = first_table.append(data, ignore_index=True)
     return first_table
 
@@ -235,7 +218,7 @@ def check_second_robort(driver):
         open_ip(dynamic = True)
     try:
         if driver.find_element_by_css_selector(
-                '#web-content > div > div.container > div > div > div.module.module1.module2.loginmodule.collapse.in > div.scan-box > div.scan-wrapper > div.scan-img > img'):
+                '#web-content > img'):
             print('*log_in error*')
             num = CompNum(update=False).give_num()
             print('-current is:' + str(num) + '-')
