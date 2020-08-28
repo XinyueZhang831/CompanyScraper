@@ -37,7 +37,7 @@ Same code, Company_Scrapy.py is used to support UI. Company_Scrapy_copy.py can b
  
  A virtual private server (VPS) is a virtual machine sold as a service by an Internet hosting service. The virtual dedicated server (VDS) also has a similar meaning. (Wikipedia: https://en.wikipedia.org/wiki/Virtual_private_server)
  
- This main code with ADLS help code need to be run on VPS to change the IP.
+ This main code with ADLS helping code need to be run on VPS to change the IP.
  
  
 ## Author:
