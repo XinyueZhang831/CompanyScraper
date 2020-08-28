@@ -16,6 +16,11 @@
  
 # Main code
  This is a acedamic research project which uses Selenium web scarpy TianyanX commercial informations.
+ 
+### Company_Scrapy.py
+### Company_Scrapy_copy.py
+Same code, Company_Scrapy.py is used to support UI. Company_Scrapy_copy.py can be used without UI and run perfectly.
+
  Main code includes:
  - Check if need to change ip (Only change IP if the previous driver closed is casued by robot detection).
  - Search the company and click the first result (according to the website, the first result will be closest to your search name).
@@ -24,8 +29,12 @@
  - Find the .ttf font file to prepare for decoding.
  - Close extra handles.
  - Quit driver if there is robot detection.
- * Data cannot be used for commercial reason!
- * With some reasons, the code will not be post.
+ ### Data cannot be used for commercial reason!
+ ### With some reasons, full code will not be posted.
+ 
+
+ 
+ 
  
 ## Author:
  Xinyue Zhang
