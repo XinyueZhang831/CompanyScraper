@@ -11,7 +11,7 @@ import socket
 import Emailme
 
 
-def open_ip(dynamic=False, log_in=False, evoke_comp_num = False, input_startnum = 0, first_run = False):
+def open_ip(dynamic=False, log_in=False):
     if dynamic:
         print(get_ip())
         Adsl().disconnect()
@@ -285,15 +285,4 @@ def get_ip():
     return IP
 
 
-class Compayscrap:
-
-    def __init__(self, dri_dir, file_dir, first_run, manual_num, comp_num):
-        self.dd= dri_dir
-        self.fd =file_dir
-        self.fr = first_run
-        self.mn = manual_num
-        self.cn = comp_num
-        self.ei = email_info
-
-    def run_scrapy(self):
-        open_ip(dynamic=False, log_in=False, evoke_comp_num = self.mn, input_startnum = self.cn, first_run = self.fr)
+open_ip(dynamic = True)
