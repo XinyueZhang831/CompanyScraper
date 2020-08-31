@@ -9,7 +9,7 @@
 ### webcomp_UI.py
  collect parameters for the main code.
  
- ![UI](QQ20200827-223241@2x.png)
+ ![UI](QQ20200830-185638@2x.png)
  
 ### Decode.py
  Change the encoded data number back to real number.
