@@ -3,7 +3,7 @@
 # Helping files
 
 ### Emailme.py
- check if the process is running in 2 minues. Will send an inform email to the user if the process stopping running.
+ check if the process is running in 2 hours. Will send an inform email to the user if the process stopping running.
 ### Dynamic_connect.py
  connect to the internet on virture machine server in order to change ip.
 ### webcomp_UI.py
