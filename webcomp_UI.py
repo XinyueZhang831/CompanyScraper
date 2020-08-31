@@ -67,7 +67,7 @@ def start_scraping(values):
         CompNum(num=comp_num).create_file()
 
     if manual_num:
-        CompNum(num = manual_num).overwrite_file()
+        CompNum(num = comp_num).overwrite_file()
 
     if noti_check:
         Thread(target=emailme).start()
