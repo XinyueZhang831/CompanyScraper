@@ -15,11 +15,10 @@
  Change the encoded data number back to real number.
  
 # Main code
- This is a acedamic research project which uses Selenium web scarpy TianyanX commercial informations.
+ This is a acedamic research project which uses Selenium web scarpy TXX commercial informations.
  
-### Company_Scrapy.py
-### Company_Scrapy_copy.py
-Same code, Company_Scrapy.py is used to support UI. Company_Scrapy_copy.py can be used without UI and run perfectly.
+### Company_Scrapy_git.py
+Same code, Company_Scrapy_git.py is used to support UI. Company_Scrapy.py is a single file which is good with IDEs.
 
  Main code includes:
  - Check if need to change ip (Only change IP if the previous driver closed is casued by robot detection).
