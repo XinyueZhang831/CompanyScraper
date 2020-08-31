@@ -24,24 +24,22 @@ def open_ip(dynamic=False):
         time.sleep(2)
 
 
-    driver = webdriver.Chrome(executable_path='D:\/webcomp\/driver/chromedriver')
-    driver.get('This is the website name')
+    driver = webdriver.Chrome(executable_path= os.getcwd()+'/driver/chromwebdriver')
+    driver.get('This is website')
     driver.implicitly_wait(2)
     check = check_the_site(driver)
     while check == False:
         time.sleep(1)
         driver = quit_driver(driver)
-        open_ip( dynamic = True)
-
+        open_ip(log_in=False, dynamic = True)
     start_scrape(driver)
 
 
 def start_scrape(driver):
+    parent_path = os.getcwd()
     num = CompNum(update=False).give_num()
     print(num)
-    input_comp = pd.read_csv(
-        'D:\/webcomp\/Sample5_3.csv')[
-                 num:]
+    input_comp = pd.read_csv(os.getcwd()+'/sample.csv')[num:]
     for i, r in input_comp.iterrows():
         if type(r['company_name']) != float:
             print('*****start*****')
@@ -50,15 +48,15 @@ def start_scrape(driver):
                 first_result, second_result, forth_result, fifth_result, sixth_result = search_comp(driver,
                                                                                                     r['company_name'])
                 first_result.to_csv(
-                    'D:\webcomp\/1\/' + r['company_name'] + '.csv')
+                    parent_path+'/1' + r['company_name'] + '.csv')
                 second_result.to_csv(
-                    'D:\webcomp\/2\/' + r['company_name'] + '.csv')
+                    parent_path+'/2' + r['company_name'] + '.csv')
                 forth_result.to_csv(
-                    'D:\webcomp\/4\/' + r['company_name'] + '.csv')
+                    parent_path+'/4' + r['company_name'] + '.csv')
                 fifth_result.to_csv(
-                    'D:\webcomp\/5\/' + r['company_name'] + '.csv')
+                    parent_path + '/5' + r['company_name'] + '.csv')
                 sixth_result.to_csv(
-                    'D:\webcomp\/6\/' + r['company_name'] + '.csv')
+                    parent_path+'/6' + r['company_name'] + '.csv')
 
                 print('**finish -' + str(CompNum(update=False, num=i).give_num()) + '-')
                 CompNum(update=True, num=i).give_num()
@@ -192,6 +190,8 @@ def find_stuff_first_table(driver, current_name, comp_name):
 
 
 
+
+
 def append_content_column(waiting_list, df, var1):
     i = 0
     while i < len(waiting_list):
@@ -282,3 +282,6 @@ def get_ip():
         s.close()
     return IP
 
+if __name__ == "__main__":
+    # execute only if run as a script
+    open_ip()
