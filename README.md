@@ -29,7 +29,7 @@ Same code, Company_Scrapy_git.py is used to support UI. Company_Scrapy.py is a s
  - Close extra handles.
  - Quit driver if there is robot detection.
  ### Data cannot be used for commercial reason!
- ### With some reasons, full code will not be posted.
+
  
 
  # VPS-Virtual Private Server
